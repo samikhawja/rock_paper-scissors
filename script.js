@@ -16,9 +16,9 @@ function playRPS() {
 
         var choice = prompt("Choose R, P or S:");
 
-        var computerChoice = Math.floor(Math.random() * 3);
-
         var choiceIndex = choiceArray.indexOf(choice.toUpperCase());
+
+        var computerChoice = Math.floor(Math.random() * 3);
 
         if (choiceIndex != 0 || choiceIndex != 1 || choiceIndex != 2) {
             while (choiceIndex != 0 && choiceIndex != 1 && choiceIndex != 2) {
