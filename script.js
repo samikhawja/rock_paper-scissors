@@ -4,7 +4,6 @@ var winCount = 0;
 var tieCount = 0;
 var lossCount = 0;
 
-
 function playRPS() {
     var confirmChoice = true;
     while (confirmChoice) {
@@ -29,22 +28,25 @@ function playRPS() {
         }
         
         var result = choiceIndex - computerChoice;
+        var message = "I'm always a winner, What do you mean?";
 
         if (result === 0) {
             tieCount += 1;
-            alert("You tied with the computer");
+            message = "tied";
         } else if (result === 1 || result === -2) {
             winCount += 1;
-            alert("You beat the computer");
+            message = "win";
         } else {
             lossCount += 1;
-            alert("The computer beat you");
+            message = "lose";
         }
-        alert("Tie count: " + tieCount +
+
+        alert("You " + message + 
+                "!\n\nTie count: " + tieCount +
                 "\nWin Count: " + winCount +
                 "\nLose Count: " + lossCount);
 
-        var confirmChoice = confirm("Would you like to play again?");
+        confirmChoice = confirm("Would you like to play again?");
 
     }
   }
