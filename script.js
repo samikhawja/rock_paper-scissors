@@ -21,12 +21,12 @@ function playRPS() {
 
         var choiceIndex = choiceArray.indexOf(choice.toUpperCase());
 
-        // if (choiceIndex != 0 || choiceIndex != 1 || choiceIndex != 2) {
-        //     while (choiceIndex != 0 || choiceIndex != 1 || choiceIndex != 2) {
-        //         choice = prompt("Choose R, P or S:");
-        //         choiceIndex = choiceArray.indexOf(choice.toUpperCase());
-        //     }
-        // }
+        if (choiceIndex != 0 || choiceIndex != 1 || choiceIndex != 2) {
+            while (choiceIndex != 0 && choiceIndex != 1 && choiceIndex != 2) {
+                choice = prompt("Choose R, P or S:");
+                choiceIndex = choiceArray.indexOf(choice.toUpperCase());
+            }
+        }
         
         var result = choiceIndex - computerChoice;
 
